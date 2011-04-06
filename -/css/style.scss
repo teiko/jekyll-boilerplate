@@ -1,0 +1,185 @@
+---
+---
+$background: rgb(255,255,255);
+$white: rgb(255,255,255);
+$black: rgb(0,0,0);
+$textcolor: rgb(0,0,0);
+$headlinecolor: rgb(0,0,0);
+$linkcolor: blue;
+
+@mixin floatleft {
+    display: inline;
+    float: left;
+}
+
+@mixin floatright {
+    display: inline;
+    float: right;
+}
+
+@mixin boldtype {
+    font-family: "Droid Sans", Helvetica, Arial, Verdana , sans-serif;
+    font-weight: bold;
+    font-style: normal;
+}
+
+@mixin regulartype {
+    font-family: "Droid Sans", Helvetica, Arial, Verdana , sans-serif;
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@mixin headlinetype {
+    font-family: "Droid Serif", "Times New Roman", serif;
+    font-weight: bold; 
+    font-style: normal;
+}
+
+@mixin borderradius {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+@mixin buttonradius {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-moz-selection{ background: $black; color: $white; text-shadow: none; }
+::selection { background: $black; color: $white; text-shadow: none; } 
+a:link { -webkit-tap-highlight-color: $black; }
+
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1400px;
+    padding: 0;
+    position: relative;
+    width: 95%;
+}
+
+
+body {
+    margin: 0;
+    padding: 20px 0 0 0;
+    background: $background;
+    -webkit-text-size-adjust: none;
+}
+
+a, a:active, a:visited { 
+    color: $linkcolor;
+}
+
+a:hover {
+    color: $linkcolor;
+}
+
+a:active, a:focus {
+    position: relative;
+    top: 1px;
+    color: $linkcolor;
+}
+
+p, ul, ol{
+    color: $textcolor;
+    @include regulartype;
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+p strong,
+ul strong {
+    color: $textcolor;
+    @include boldtype;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    @include floatleft;
+    color: $headlinecolor;
+    @include headlinetype;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.4em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.0em;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.8em;
+    line-height: 1.3333em;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 1.4em;
+    line-height: 1.4286em;
+    margin-bottom: 20px;
+}
+
+h5 {
+    font-size: 1.2em;
+    line-height: 1.6667em;
+    margin-bottom: 20px;
+}
+
+h6 {
+    font-size: 1.1em;
+    line-height: 1.8182em;
+    margin-bottom: 20px;
+}
+
+header {
+    
+    @include floatleft;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    
+}
+
+
+nav {
+    @include floatleft;
+    margin: 0 0 20px 0;
+    padding: 0;
+    position: relative;
+}
+
+
+article {
+    @include floatleft;
+    clear: left;
+    margin: 0 0 20px 0;
+    padding: 0;
+    width: 70%;
+}
+
+
+aside {
+    @include floatleft;
+    margin: 0;
+    padding: 0 0 0 5%;
+    width: 25%;
+}
+
+
+footer {
+    @include floatleft;
+    margin: 0;
+    padding: 0 0 20px 0;
+    width: 100%;
+}

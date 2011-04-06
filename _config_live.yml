@@ -1,0 +1,16 @@
+auto: false
+server: false
+destination: ./_site
+markdown: rdiscount
+pygments: true
+lsi: false
+exclude: capfile, capistrano
+permalink: /:categories/:title
+domain: yourdomainhere.co.uk
+url: http://yourdomainhere.co.uk
+title: Your Site Title
+googleverification: yourverificationcodehere
+googleanalyticsid: UA-0000000-0
+author: Author Name
+authoremail: test@example.com
+copyright: Your Company
