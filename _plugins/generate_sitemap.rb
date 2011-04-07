@@ -92,7 +92,7 @@ module Jekyll
   			  path = path[0..-11]
   		  end
         
-        unless path =~/error/ || path =~/.scss/
+        unless path =~/error/ || path =~/.scss/ || path =~/htaccess/ || path =~/README/ || path =~/.xml/
           result += entry(path, mod_date)
         end
       }

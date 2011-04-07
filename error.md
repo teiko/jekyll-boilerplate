@@ -1,6 +1,0 @@
----
-layout: default
-title: 404 Page Not Found
----
-
-Oops! Something has gone wrong and the page you were looking for could not be found! Try the [home page](/).

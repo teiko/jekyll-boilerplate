@@ -7,8 +7,8 @@ RewriteEngine on
 # Get rid of www in the domain
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 # RewriteRule ^(.*)$ http://%1/$1 [R=301]
-RewriteCond %{HTTP_HOST} !^{{ site.domain }}$
-RewriteRule (.*) {{ site.url }}/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} !^{{ site.domain }}$
+#RewriteRule (.*) {{ site.url }}/$1 [R=301,L]
 
 # Custom error
 ErrorDocument 404 /error.html

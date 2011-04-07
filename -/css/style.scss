@@ -6,6 +6,7 @@ $black: rgb(0,0,0);
 $textcolor: rgb(0,0,0);
 $headlinecolor: rgb(0,0,0);
 $linkcolor: blue;
+$hovercolor: red;
 
 @mixin floatleft {
     display: inline;
@@ -57,7 +58,7 @@ a:link { -webkit-tap-highlight-color: $black; }
     max-width: 1400px;
     padding: 0;
     position: relative;
-    width: 95%;
+    width: 90%;
 }
 
 
@@ -73,13 +74,13 @@ a, a:active, a:visited {
 }
 
 a:hover {
-    color: $linkcolor;
+    color: $hovercolor;
 }
 
 a:active, a:focus {
     position: relative;
     top: 1px;
-    color: $linkcolor;
+    color: $hovercolor;
 }
 
 p, ul, ol{
@@ -87,6 +88,7 @@ p, ul, ol{
     @include regulartype;
     font-size: 1.2em;
     line-height: 1.5em;
+    margin-bottom: 18px;
 }
 
 p strong,
@@ -108,40 +110,40 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: 2.4em;
     line-height: 1.5em;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 h2 {
     font-size: 2.0em;
-    line-height: 1.5em;
-    margin-bottom: 20px;
+    line-height: 1.8em;
+    margin-bottom: 18px;
 }
 
 h3 {
     font-size: 1.8em;
-    line-height: 1.3333em;
-    margin-bottom: 20px;
+    line-height: 1em;
+    margin-bottom: 18px;
 }
 
 h4 {
     font-size: 1.4em;
-    line-height: 1.4286em;
-    margin-bottom: 20px;
+    line-height: 1.2857em;
+    margin-bottom: 0;
 }
 
 h5 {
     font-size: 1.2em;
-    line-height: 1.6667em;
-    margin-bottom: 20px;
+    line-height: 1.5em;
+    margin-bottom: 0;
 }
 
 h6 {
-    font-size: 1.1em;
-    line-height: 1.8182em;
-    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    margin-bottom: 0;
 }
 
-header {
+header[role="banner"] {
     
     @include floatleft;
     margin: 0;
@@ -151,19 +153,30 @@ header {
     
 }
 
-
-nav {
+nav[role="navigation"] {
     @include floatleft;
-    margin: 0 0 20px 0;
+    margin: 0 0 18px 0;
     padding: 0;
     position: relative;
+    width: 100%;
+    
+    ul {
+        @include floatleft;
+        
+        li {
+            @include floatleft;
+            margin: 0 20px 0 0;
+        }
+        
+    }
+    
 }
 
 
 article {
     @include floatleft;
     clear: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 18px 0;
     padding: 0;
     width: 70%;
 }
@@ -180,6 +193,24 @@ aside {
 footer {
     @include floatleft;
     margin: 0;
-    padding: 0 0 20px 0;
+    padding: 0 0 18px 0;
     width: 100%;
+    
+    ul {
+        @include floatleft;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+        li {
+            @include floatleft;
+        }
+        
+        li:last-child {
+            @include floatright;
+        }
+        
+    }
+    
 }

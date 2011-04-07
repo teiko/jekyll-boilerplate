@@ -4,7 +4,7 @@ destination: ./_site
 markdown: rdiscount
 pygments: true
 lsi: false
-exclude: capfile, capistrano
+exclude: capfile, capistrano, README.markdown
 permalink: /:categories/:title
 domain: yourdomainhere.co.uk
 url: http://yourdomainhere.co.uk

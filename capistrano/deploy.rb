@@ -1,21 +1,21 @@
 
-set :user, "rails"
-set :application, "iqcommerce"
+set :user, "SSH USERNAME"
+set :application, "APPNAME"
 set(:deploy_to) { File.join("", "home", user, application) }
 
 set :scm, :git
-set :repository,  "git@codebasehq.com:iqcommerce/iqcommerce/iqcommerce.git"
+set :repository,  "REPOADDRESS"
 set :branch, "master"
 set :deploy_via, :remote_cache
 
-set :domain, "iqcommerce.co.uk"
-set :domain_aliases, "www.iqcommerce.co.uk iqcommerce.iqhosting-001.vm.brightbox.net iqcommerce.iqhosting-002.vm.brightbox.net iqcommerce.lb01.iqhosting.vm.brightbox.net"
+set :domain, "APPDOMAIN"
+set :domain_aliases, "DOMAIN ALIASES"
 
 default_run_options[:pty] = true
 ssh_options[:forward_agent] = true
 
-server "iqhosting-001.vm.brightbox.net", :app, :web, :db, :primary => true
-server "iqhosting-002.vm.brightbox.net", :app, :web
+server "APP SERVER 1", :app, :web, :db, :primary => true
+server "APP SERVER 2", :app, :web
 
 namespace :apache do
   
